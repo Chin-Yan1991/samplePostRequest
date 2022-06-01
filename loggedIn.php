@@ -1,9 +1,8 @@
 <script>
     const userid = sessionStorage.userid;
     if(userid!='user/123-abc'){ 
-        alert(userid)
-        console.log("sessionStorage",sessionStorage)
-        //window.location = "http://localhost:8989"; 
+        alert("Error 401: Unauthorized");
+        window.location = "http://127.0.0.1:8989"; 
     }
 </script>
 <!DOCTYPE html>
