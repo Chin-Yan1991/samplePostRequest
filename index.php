@@ -56,13 +56,13 @@
                 const response = XHR.responseText;
                 //console.log(response);
                 
-                const data = JSON.parse(response);
-                if(data.code == 200){
-                    sessionStorage.setItem("userid", data.data.userid);
+                const res = JSON.parse(response);
+                if(res.code == 200){
+                    sessionStorage.setItem("userid", res.data.userid);
                     window.location = "http://127.0.0.1:8989/loggedIn.php"
                 }else{
-                    console.log(data)
-                    alert(`Error ${data.code} : ${data.error}`);
+                    console.log(res)
+                    alert(`Error ${res.code} : ${res.error}`);
                 }
             }
         }
